@@ -1,0 +1,19 @@
+
+<img id="pokedexLogo" src="assets/pokedex.png" alt="pokedex">
+
+<!--
+<input matInput #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Ex. Pikachu" value="">
+-->
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search</mat-label>
+    <input matInput #searchBox class="search-box" (input)="search(searchBox.value)" placeholder="Ex. Pikachu, 55, Cara..." value="">
+  </mat-form-field>
+</form>
+
+<mat-list class="pkmnList" infiniteScroll [scrollWindow]="false" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+  <mat-list-item class="pkmnItem" *ngFor="let pokemon of pokemons?.data" (click)="getPokemonDetails(pokemon.id)" >
+    <img src="assets/img/sprites/{{pokemon.id}}.png" alt="{{pokemon.name}}">
+    {{pokemon.id}}.{{ pokemon.name }}
+  </mat-list-item>
+</mat-list>

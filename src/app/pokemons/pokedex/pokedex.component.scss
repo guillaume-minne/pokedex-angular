@@ -1,0 +1,31 @@
+.drawer {
+  //width: 400px;
+  //height: 100%;
+}
+
+.list {
+  position: fixed;
+  width: 25%;
+  min-width: 180px;
+}
+
+.content {
+  position: fixed;
+  width: 49%;
+  max-width: 600px;
+  left: 25%;
+  //margin-left: 25%;
+
+}
+
+
+.teamContent {
+  position: fixed;
+  //margin-left: 75%;
+  width: 25%;
+  right: 0%;
+  height: 100%;
+  background-color: #424242;
+  border-radius: 4px;
+
+}

@@ -1,0 +1,15 @@
+
+<mat-drawer-container class="drawer">
+  <mat-drawer class="list" mode="side" opened>
+    <app-pokemon-list  (messageEvent)="receiveMessage($event)"></app-pokemon-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+
+        <app-pokemon-detail class="content" [pokemonIdDetail]="pokemonId"></app-pokemon-detail>
+        <app-team class="teamContent" [selectedPokemonId]="pokemonId"></app-team>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>
+

@@ -1,0 +1,21 @@
+
+<img id="pokeballLogo" src="assets/pokeball.png" alt="pokeball">
+
+<mat-list>
+  <mat-list-item class="teamItem" *ngFor="let pokemon of pokemons; let i = index">
+    <mat-icon class="pkmnIcon" *ngIf="pokemon.id == 0" (click)="addPokemon(i)">add_circle_outline</mat-icon>
+    <mat-icon class="pkmnIcon" *ngIf="pokemon.id != 0" (click)="removePokemon(i)">remove_circle_outline</mat-icon>
+    <img style="max-height: 80px;" src="assets/img/sprites/{{pokemon.id}}.png" alt="{{pokemon.name}}">
+    {{pokemon.name}}
+    </mat-list-item>
+
+
+<!--
+  <mat-list-item *ngFor="let pokemon of pokemons?.data" (click)="getPokemonDetails(pokemon.id)" >
+    <img src="assets/img/sprites/{{pokemon.id}}.png" alt="{{pokemon.name}}">
+    {{pokemon.id}}.{{ pokemon.name }}
+  </mat-list-item>
+-->
+
+
+</mat-list>

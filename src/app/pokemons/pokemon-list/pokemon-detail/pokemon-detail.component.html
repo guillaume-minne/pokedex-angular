@@ -1,0 +1,39 @@
+  <mat-card *ngIf=pokemon>
+    <!--
+      <mat-icon routerLink="/pokemons">chevron_left</mat-icon>
+    -->
+    <mat-grid-list cols="4">
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-list>
+          <mat-list-item>
+            <img src="assets/img/official-artwork/{{pokemon.id}}.png">
+          </mat-list-item>
+          <mat-list-item>
+            <span>No. {{pokemon.id | number:'3.0'}}</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-list>
+          <mat-list-item> {{pokemon.name}} </mat-list-item>
+          <mat-icon (click)="audioPlay()">play_circle_outline </mat-icon>
+          <mat-chip-list>
+            <mat-chip *ngFor="let type of pokemon.types">
+              {{type}}
+            </mat-chip>
+          </mat-chip-list>
+          <mat-list-item> Taille: {{pokemon.height | number:'1.1-1'}} m </mat-list-item>
+          <mat-list-item> Poids: {{pokemon.weight  | number:'1.1-1'}} kg </mat-list-item>
+        </mat-list>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="4" [rowspan]="3">
+        {{pokemon.description}}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+      <audio autoplay src="assets/audio/{{pokemon.id}}.mp3"> </audio>
+
+    </mat-card>
+
+
+

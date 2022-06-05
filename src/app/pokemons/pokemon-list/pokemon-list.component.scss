@@ -1,0 +1,21 @@
+.pkmnList{
+  position: fixed;
+  width: 25%;
+  min-width: 180px;
+  height: calc(82% - 45px);
+  overflow: auto;
+  overflow-x: none;
+}
+
+.pkmnItem {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#pokedexLogo {
+  display: block;
+  max-width: 100%;
+  max-height: 10%;
+  margin: 20px auto;
+}
+
